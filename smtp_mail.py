@@ -3,7 +3,7 @@
 import smtplib
 from email.mime.text import MIMEText
 
-#  ehlo test.com
+# (extended hello) ehlo test.com
 #  mail from:  test@ftest.com
 #  rcpt to:  me@me.com
 #  data
