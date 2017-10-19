@@ -10,7 +10,7 @@ data = ''
 try:
     sock.sendall(http_get)
     data = sock.recvfrom(1024)
-except socket.error:
+except(socket.error):
     print ("Socket error", socket.errno)
 finally:
     print("closing connection")
@@ -18,9 +18,7 @@ finally:
 
 strdata = data[0].decode("utf-8")
 
-
 headers = strdata.splitlines()
-
 
 for s in headers:
     if re.search('Server:', s):
